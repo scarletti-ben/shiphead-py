@@ -67,7 +67,8 @@ Ignoring most of the "why" of each rule, a simple reference of what can be playe
 
 - The AI is not especially adept and will make sub-par decisions
 
-### What Can be Played on a...
+```text
+# What Can be Played on a...
 -  [2]  => 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
 -  [3]  => 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
 -  [4]  => 2, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
@@ -83,8 +84,10 @@ Ignoring most of the "why" of each rule, a simple reference of what can be playe
 -  [Q]  => 2, 7, 10, Q, K, A
 -  [K]  => 2, 7, 10, K, A
 -  [A]  => 2, 7, 10, A
+```
 
-### What Can it Play On?
+# What Can it Play On?
+```text
 -  2  => 2, 3, 4, 5, 6, <8>, 9, <9>, J, Q, K, A
 -  3  => 2, 3, 9
 -  4  => 2, 3, 4, 9
@@ -98,6 +101,7 @@ Ignoring most of the "why" of each rule, a simple reference of what can be playe
 -  Q  => 2, 3, 4, 5, 6, <8>, <9>, J, Q
 -  K  => 2, 3, 4, 5, 6, <8>, <9>, J, Q, K
 -  A  => 2, 3, 4, 5, 6, <8>, <9>, J, Q, K, A
+```
 
 # Project Structure
 
