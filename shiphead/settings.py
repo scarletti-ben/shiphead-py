@@ -1,5 +1,5 @@
 """
-Defines game settings
+Defines settings variables for the game
 
 Author: Ben Scarletti
 Source: https://github.com/scarletti-ben/shiphead-py
