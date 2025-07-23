@@ -1,12 +1,13 @@
 # Overview
-This project is a new and improved version of my previous `Python`-based game project, `shiphead`. The game "Shiphead" was a playing card game from my childhood, which often goes by a less family-friendly [name](https://en.wikipedia.org/wiki/Shithead_(card_game))
+This project is a new and improved version of my previous `Python` game project, `shiphead`. The game `Shiphead` was a playing card game from my childhood, which often goes by a less family-friendly [name](https://en.wikipedia.org/wiki/Shithead_(card_game)).
 
-The previous version of this project used [Pygame](https://www.pygame.org/wiki/about) to create a `GUI` layer for the game. In creating the `GUI` layer, some of the game logic became entangled with the `GUI` logic and the project became quite hard to maintain. This version aims to create the game purely for a `CLI`. This has meant that the game logic is much more maintainable
+The previous version of this project used [Pygame](https://www.pygame.org/wiki/about) to create a `GUI` layer for the game. In creating the `GUI` layer, some of the game logic became entangled with the `GUI` logic and the project became quite hard to maintain. This version aims to create the game purely for a `CLI`. This has meant that the game logic is much more maintainable.
 
-I hope that in future this version will form the base logic of future iterations, possibly with a `GUI` layer, or even be used to train a computer player via `reinforcement learning` (`RL`). To attempt to create compatibility with future iterations, a directed effort has been made to define a `snapshot` object for each player turn, containing the game state, and available decisions
+To attempt to create compatibility with future iterations, a directed effort has been made to define a `snapshot` object for each player turn, containing the game state, and available decisions. I hope that in future this version will form the base logic of future iterations, possibly with a `GUI` layer, or even be used to train a computer player via [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning)
 
 # Installing the Game
-Before starting, ensure your system `PATH` is correctly configured and ensure that `git` and `python` are installed. The steps below are for for `Windows`, using `Command Prompt`. The game should be installable via any shell and on any system that runs `Python` so you may need to adapt the steps for your system!
+> [!TIP]
+> Before starting, ensure your system `PATH` is correctly configured and ensure that `git` and `python` are installed. The steps below are for for `Windows`, using `Command Prompt`. The game should be installable via any shell and on any system that runs `Python` so you may need to adapt the steps for your system!
 
 ## Cloning this Repository
 Open your terminal and navigate to the location where you want a clone of this repository to be created
@@ -28,9 +29,9 @@ The steps below are used to set up a virtual environment with the correct depend
 > You will need to activate the virtual environment again, via `.\venv\Scripts\activate`, if you leave the virtual environment and come back
 
 # Playing the Game
-Assuming the [install](#installing-the-game) steps were successful and you are in the virtual environment then you can run `python -m shiphead` to start the game. This will run the entry point script of the package, `__main__.py`.
+Assuming the [install](#installing-the-game) steps were successful and you are in the virtual environment then you can run `python -m shiphead` to start the game. This will run the entry point script of the package, `__main__.py`
 
-## Game Controls
+# Game Controls
 The game is a simple `CLI` and, by default, should start you in a game against a computer-controlled player. 
 
 Each turn you should be presented with a simple list of choices, as seen below, and can make your decision by typing in a valid number and pressing the `Enter` key
@@ -46,15 +47,15 @@ Center: [8·♠, Q·♠, Q·♣, K·♦, K·♠]
 Selection [0 - 2]:
 ```
 
-## Game Rules
-The rules for `shiphead`, as well as the name, vary between different people. The rules I have been playing for a while now are built into this version, and are defined below. I am sure there are better ways to write the rules for a beginner, but these rules are mainly aimed as a refresher for people who have played before
+# Game Rules
+The rules for `shiphead`, as well as the name, vary quite significantly between different people. The rules I have been playing for a while now are built into this version, and are defined below. I am sure there are better ways to write the rules for a beginner, but these rules are mainly aimed as a refresher for people who have played before
 
-The general premise of the game is to get rid of all of the cards in your hand by playing them onto a central pile. To play a card, or set of cards, you will need to follow the rules for playing a card - which will be detailed below. You will also notice that you have two other piles, other than your hand, that you will also need to get rid of!
+The general premise of the game is to get rid of all of your cards by playing them onto a central pile. To play a card, or set of cards, you will need to follow the [rules](#rule-list) for playing a card . You will also notice that you have two other piles, other than your hand, that you will also need to get rid of!
 
-### Rule List
+## Rule List
 - On your turn you can decide to play any number of a single rank of card that is playable, see [card reference guide](#card-reference-guide)
-- You may also decide to pick up the center pile voluntarily, which you may wish to do for tactical reasons. This assumes that there are cards to pickup and that there is not a special rule in play such as "eight-or-wait"
 - If you cannot play, and there is not a special rule in play such as "eight-or-wait", then you must pick up the central pile and end your turn
+- You may also decide to pick up the center pile voluntarily, which you may wish to do for tactical reasons. This assumes that there are cards to pickup and that there is not a special rule in play such as "eight-or-wait"
 - If you played cards from your hand and there is still a deck left to pick up from, then you must re-fill your hand back to 5 cards
 - Once you have finished your turn, the game moves onto the next player
 - If, on your turn, you complete a "four-in-a-row", where there are four of a single card rank in a row on top of the pile, the pile is burned and you take another turn
@@ -71,7 +72,7 @@ The general premise of the game is to get rid of all of the cards in your hand b
     - You will play exactly one card from your "hidden" pile on your turn
     - You play the card entirely blind, if the card was not playable then you pick up the central pile and end your turn
 
-### Card Reference Guide
+## Card Reference Guide
 The `[ ]` and `< >` symbols are symbols to denote different states for cards on top of the pile. `[ ]` denotes that the default state applies, and `< >` suggests a "deactivated" state for the card. Some examples are listed below
 - An `[8]` is a "normal" `8` that has just been played, and requires the player to follow the "eight-or-wait" rule, whereas an `<8>` has already been "waited" and the "eight-or-wait" rule no longer applies to it
 - A `[9]` is a "normal" `9` that has just been played, and requires the player to follow the "nine-or-lower" rule, whereas a `<9>` has had a `7` played on top and the "nine-or-lower" rule no longer applies to it
