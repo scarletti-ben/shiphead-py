@@ -1,5 +1,6 @@
 """
 Main entry point for the game
+- Run via `shiphead-py> python -m shiphead.main`
 - Imports relevant modules from the game's package
 - Staging area for experimental code
 
