@@ -84,10 +84,8 @@ Ignoring most of the "why" of each rule, a simple reference of what can be playe
 -  [Q]  => 2, 7, 10, Q, K, A
 -  [K]  => 2, 7, 10, K, A
 -  [A]  => 2, 7, 10, A
-```
 
 # What Can it Play On?
-```text
 -  2  => 2, 3, 4, 5, 6, <8>, 9, <9>, J, Q, K, A
 -  3  => 2, 3, 9
 -  4  => 2, 3, 4, 9
@@ -135,7 +133,7 @@ Currently the repository structure means that there is a `Python` package named 
 title: "shiphead-py"
 date: "2025-07-01"
 last_modified_at: "2025-07-23"
-description: "Streamlined version of my previous Python-based game project, shiphead. The game "Shiphead" was a playing card game from my childhood"
+description: "Streamlined version of my previous Python-based game project, shiphead"
 categories: [
   miscellaneous
 ]
