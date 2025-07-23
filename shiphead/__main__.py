@@ -5,6 +5,7 @@ Main entry point for the game
 - Staging area for experimental code
 
 Author: Ben Scarletti
+Version: 1.0.0
 Source: https://github.com/scarletti-ben/shiphead-py
 Licence: MIT
 """
