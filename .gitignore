@@ -1,0 +1,5 @@
+# Ignore files in the __local directory
+__local/
+
+# Ignore the venv directory
+venv/
